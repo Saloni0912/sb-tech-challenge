@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import java.util.UUID;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "accountUid",
@@ -17,11 +19,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class Account {
 
     @JsonProperty("accountUid")
-    private String accountUid;
+    private UUID accountUid;
     @JsonProperty("accountType")
     private String accountType;
     @JsonProperty("defaultCategory")
-    private String defaultCategory;
+    private UUID defaultCategory;
     @JsonProperty("currency")
     private String currency;
     @JsonProperty("createdAt")
@@ -30,19 +32,25 @@ public class Account {
     private String name;
 
 
-    @JsonProperty("accountUid")
-    public String getAccountUid() {
-        return accountUid;
-    }
-
     @JsonProperty("accountType")
     public String getAccountType() {
         return accountType;
     }
 
-    @JsonProperty("defaultCategory")
-    public String getDefaultCategory() {
+    public UUID getAccountUid() {
+        return accountUid;
+    }
+
+    public void setAccountUid(UUID accountUid) {
+        this.accountUid = accountUid;
+    }
+
+    public UUID getDefaultCategory() {
         return defaultCategory;
+    }
+
+    public void setDefaultCategory(UUID defaultCategory) {
+        this.defaultCategory = defaultCategory;
     }
 
     @JsonProperty("currency")
@@ -61,6 +69,19 @@ public class Account {
     }
 
 
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
 
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
 
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

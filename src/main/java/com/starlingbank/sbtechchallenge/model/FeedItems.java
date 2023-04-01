@@ -11,6 +11,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 
 public class FeedItems {
+    @Override
+    public String toString() {
+        return "FeedItems{" +
+                "feedItems=" + feedItems +
+                '}';
+    }
 
     @JsonProperty("feedItems")
     private List<FeedItem> feedItems;

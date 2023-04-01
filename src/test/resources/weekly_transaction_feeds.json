@@ -1,0 +1,76 @@
+{
+  "feedItems": [
+    {
+      "feedItemUid": "41511f94-e018-4230-b0d0-d099d4e0b446",
+      "categoryUid": "4f91690b-8a34-4730-851f-4834b4d986b3",
+      "amount": {
+        "currency": "GBP",
+        "minorUnits": 3238
+      },
+      "direction": "IN"
+    },
+    {
+      "feedItemUid": "4151ae88-0f0e-45cd-af74-7fd702d32df6",
+      "categoryUid": "4f91690b-8a34-4730-851f-4834b4d986b3",
+      "amount": {
+        "currency": "GBP",
+        "minorUnits": 791
+      },
+      "direction": "OUT"
+    },
+    {
+      "feedItemUid": "415108e6-e734-4254-aeb6-dea66d4df398",
+      "categoryUid": "4f91690b-8a34-4730-851f-4834b4d986b3",
+      "amount": {
+        "currency": "GBP",
+        "minorUnits": 3433
+      },
+      "direction": "OUT"
+    },
+    {
+      "feedItemUid": "41518bb5-b580-4ed3-8944-5f9a40940ad7",
+      "categoryUid": "4f91690b-8a34-4730-851f-4834b4d986b3",
+      "amount": {
+        "currency": "GBP",
+        "minorUnits": 3110
+      },
+      "direction": "OUT"
+    },
+    {
+      "feedItemUid": "4151a668-a894-4df9-92b2-056269a6b3a0",
+      "categoryUid": "4f91690b-8a34-4730-851f-4834b4d986b3",
+      "amount": {
+        "currency": "GBP",
+        "minorUnits": 2932
+      },
+      "direction": "OUT"
+    },
+    {
+      "feedItemUid": "4151dda6-6f60-4bf1-ac60-8ea5b3c7c20b",
+      "categoryUid": "4f91690b-8a34-4730-851f-4834b4d986b3",
+      "amount": {
+        "currency": "GBP",
+        "minorUnits": 3410
+      },
+      "direction": "OUT"
+    },
+    {
+      "feedItemUid": "41519fa7-830c-424f-be46-b86d144158c6",
+      "categoryUid": "4f91690b-8a34-4730-851f-4834b4d986b3",
+      "amount": {
+        "currency": "GBP",
+        "minorUnits": 144
+      },
+      "direction": "OUT"
+    },
+    {
+      "feedItemUid": "41510874-13d9-430d-b7f8-d5b9c551d1b3",
+      "categoryUid": "4f91690b-8a34-4730-851f-4834b4d986b3",
+      "amount": {
+        "currency": "GBP",
+        "minorUnits": 200000
+      },
+      "direction": "IN"
+    }
+  ]
+}

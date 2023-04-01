@@ -11,6 +11,21 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 
 public class Amount {
+    public Amount() {
+    }
+
+    @Override
+    public String toString() {
+        return "Amount{" +
+                "currency='" + currency + '\'' +
+                ", minorUnits=" + minorUnits +
+                '}';
+    }
+
+    public Amount(String currency, Integer minorUnits) {
+        this.currency = currency;
+        this.minorUnits = minorUnits;
+    }
 
     @JsonProperty("currency")
     private String currency;
@@ -27,4 +42,11 @@ public class Amount {
         return minorUnits;
     }
 
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public void setMinorUnits(Integer minorUnits) {
+        this.minorUnits = minorUnits;
+    }
 }

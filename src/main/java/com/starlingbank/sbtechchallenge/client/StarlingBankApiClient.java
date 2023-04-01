@@ -1,8 +1,7 @@
-package com.starlingbank.sbtechchallenge.services;
+package com.starlingbank.sbtechchallenge.client;
 
 import com.starlingbank.sbtechchallenge.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -10,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -19,7 +18,7 @@ import static java.util.UUID.randomUUID;
 import static org.springframework.web.util.UriComponentsBuilder.fromHttpUrl;
 
 @Service
-public class StarlingBankService {
+public class StarlingBankApiClient {
 
     @Value("${starling.api.accountsUrl}")
     private String accountsUrl;
@@ -31,7 +30,6 @@ public class StarlingBankService {
     private String savingGoalUrl;
 
     @Autowired
-    @Qualifier("starlingApiRestTemplate")
     private RestTemplate restTemplate;
 
     public Accounts fetchAccounts(){
@@ -39,7 +37,7 @@ public class StarlingBankService {
         return accountsResponse.getBody();
     }
 
-    public FeedItems fetchWeeklyTransactionFeeds(UUID accountUid, UUID categoryUid, LocalDateTime minTransactionTimestamp, LocalDateTime maxTransactionTimestamp ){
+    public FeedItems fetchWeeklyTransactionFeeds(UUID accountUid, UUID categoryUid, OffsetDateTime minTransactionTimestamp, OffsetDateTime maxTransactionTimestamp ){
         Map<String,Object> accountDetails = new HashMap<>();
         accountDetails.put("accountUid",accountUid);
         accountDetails.put("categoryUid",categoryUid);

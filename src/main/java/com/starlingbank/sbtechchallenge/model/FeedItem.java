@@ -34,6 +34,35 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 
 public class FeedItem {
+    @Override
+    public String toString() {
+        return "FeedItem{" +
+                "feedItemUid='" + feedItemUid + '\'' +
+                ", categoryUid='" + categoryUid + '\'' +
+                ", amount=" + amount +
+                ", sourceAmount=" + sourceAmount +
+                ", direction='" + direction + '\'' +
+                ", updatedAt='" + updatedAt + '\'' +
+                ", transactionTime='" + transactionTime + '\'' +
+                ", settlementTime='" + settlementTime + '\'' +
+                ", source='" + source + '\'' +
+                ", status='" + status + '\'' +
+                ", counterPartyType='" + counterPartyType + '\'' +
+                ", counterPartyName='" + counterPartyName + '\'' +
+                ", counterPartySubEntityName='" + counterPartySubEntityName + '\'' +
+                ", counterPartySubEntityIdentifier='" + counterPartySubEntityIdentifier + '\'' +
+                ", counterPartySubEntitySubIdentifier='" + counterPartySubEntitySubIdentifier + '\'' +
+                ", reference='" + reference + '\'' +
+                ", country='" + country + '\'' +
+                ", spendingCategory='" + spendingCategory + '\'' +
+                ", hasAttachment=" + hasAttachment +
+                ", hasReceipt=" + hasReceipt +
+                ", batchPaymentDetails=" + batchPaymentDetails +
+                ", transactingApplicationUserUid='" + transactingApplicationUserUid + '\'' +
+                ", counterPartyUid='" + counterPartyUid + '\'' +
+                ", counterPartySubEntityUid='" + counterPartySubEntityUid + '\'' +
+                '}';
+    }
 
     @JsonProperty("feedItemUid")
     private String feedItemUid;
