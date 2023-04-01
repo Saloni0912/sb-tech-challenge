@@ -5,6 +5,9 @@ import com.starlingbank.sbtechchallenge.model.Accounts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * This class invokes Starling Bank API to fetch accounts.
+ */
 @Service
 public class AccountsService {
 

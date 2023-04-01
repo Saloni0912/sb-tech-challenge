@@ -9,6 +9,10 @@ import org.springframework.http.client.ClientHttpResponse;
 
 import java.io.IOException;
 
+/**
+ * This Interceptor class sets http headers such as authorization in
+ * the outgoing requests.
+ */
 public class HttpClientRequestInterceptor implements ClientHttpRequestInterceptor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HttpClientRequestInterceptor.class);

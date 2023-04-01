@@ -7,6 +7,9 @@ import org.springframework.web.client.ResponseErrorHandler;
 
 import java.io.IOException;
 
+/**
+ * This class handles error for RestTemplate
+ */
 @Component
 public class RestTemplateErrorHandler implements ResponseErrorHandler {
     @Override

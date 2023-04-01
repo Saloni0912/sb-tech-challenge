@@ -12,6 +12,10 @@ import org.springframework.stereotype.Service;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/*
+This Service class orchestrates other services to fetch accounts, transactions,
+calculate rounded up value and sends the amount to SavingsGoalService.
+ */
 @Service
 public class RoundUpService {
 

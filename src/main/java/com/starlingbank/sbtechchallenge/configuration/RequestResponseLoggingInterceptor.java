@@ -11,6 +11,10 @@ import org.springframework.util.StreamUtils;
 import java.io.IOException;
 import java.nio.charset.Charset;
 
+/**
+ * This Interceptor class logs information about every request
+ * and response.
+ */
 public class RequestResponseLoggingInterceptor implements ClientHttpRequestInterceptor {
 
     private final Logger logger = LoggerFactory.getLogger(RequestResponseLoggingInterceptor.class);

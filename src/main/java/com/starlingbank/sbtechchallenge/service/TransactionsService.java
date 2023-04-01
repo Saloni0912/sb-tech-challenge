@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * This class invokes Starling Bank API to fetch transactions
+ * in given time period.
+ */
 @Service
 public class TransactionsService {
 

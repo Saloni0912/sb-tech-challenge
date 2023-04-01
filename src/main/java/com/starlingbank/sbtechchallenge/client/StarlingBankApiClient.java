@@ -17,6 +17,11 @@ import java.util.UUID;
 import static java.util.UUID.randomUUID;
 import static org.springframework.web.util.UriComponentsBuilder.fromHttpUrl;
 
+/**
+ * This Service class interacts with Starling Bank Public APIs in order to fetch
+ * account details, transaction feeds in specified period and saves given amount
+ * into savings goal.
+ */
 @Service
 public class StarlingBankApiClient {
 

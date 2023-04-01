@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+/**
+ * This Service invokes Starling Bank API to save an amount
+ * into savings goal.
+ */
 @Service
 public class SavingsGoalService {
 

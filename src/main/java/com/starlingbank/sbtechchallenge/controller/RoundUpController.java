@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * This Controller calculates rounded up value for transactions
+ * within given period and puts it into a saving goal.
+ */
 @RestController
 public class RoundUpController {
 

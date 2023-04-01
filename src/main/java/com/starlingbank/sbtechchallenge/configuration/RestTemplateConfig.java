@@ -16,6 +16,11 @@ import static java.lang.String.format;
 import static org.springframework.http.HttpHeaders.*;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
+/**
+ * This Configuration class creates RestTemplate Bean which sets http headers
+ * and logs request and responses using Interceptors. We have also set
+ * error handler in this class.
+ */
 @Configuration
 public class RestTemplateConfig {
 
