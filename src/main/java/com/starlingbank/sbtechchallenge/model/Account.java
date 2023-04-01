@@ -1,40 +1,26 @@
 package com.starlingbank.sbtechchallenge.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
 import java.util.UUID;
-
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "accountUid",
-        "accountType",
-        "defaultCategory",
-        "currency",
-        "createdAt",
-        "name"
-})
 
 public class Account {
 
-    @JsonProperty("accountUid")
     private UUID accountUid;
-    @JsonProperty("accountType")
     private String accountType;
-    @JsonProperty("defaultCategory")
     private UUID defaultCategory;
-    @JsonProperty("currency")
     private String currency;
-    @JsonProperty("createdAt")
     private String createdAt;
-    @JsonProperty("name")
     private String name;
 
+    public Account(UUID accountUid, String accountType, UUID defaultCategory, String currency, String createdAt, String name) {
+        this.accountUid = accountUid;
+        this.accountType = accountType;
+        this.defaultCategory = defaultCategory;
+        this.currency = currency;
+        this.createdAt = createdAt;
+        this.name = name;
+    }
 
-    @JsonProperty("accountType")
-    public String getAccountType() {
-        return accountType;
+    public Account() {
     }
 
     public UUID getAccountUid() {
@@ -45,6 +31,14 @@ public class Account {
         this.accountUid = accountUid;
     }
 
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
     public UUID getDefaultCategory() {
         return defaultCategory;
     }
@@ -53,35 +47,39 @@ public class Account {
         this.defaultCategory = defaultCategory;
     }
 
-    @JsonProperty("currency")
     public String getCurrency() {
         return currency;
-    }
-
-    @JsonProperty("createdAt")
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    @JsonProperty("name")
-    public String getName() {
-        return name;
-    }
-
-
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
     }
 
     public void setCurrency(String currency) {
         this.currency = currency;
     }
 
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountUid=" + accountUid +
+                ", accountType='" + accountType + '\'' +
+                ", defaultCategory=" + defaultCategory +
+                ", currency='" + currency + '\'' +
+                ", createdAt='" + createdAt + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
