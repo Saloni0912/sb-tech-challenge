@@ -35,6 +35,15 @@
 						"url": "localhost:8080/roundUp"
 					},
 					"response": []
+				},
+				{
+					"name": "Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/accounts"
+					},
+					"response": []
 				}
 			]
 		},
