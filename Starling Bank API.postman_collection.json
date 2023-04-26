@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "d63cdd89-2e8c-438c-987f-555bc5cf8da1",
+		"name": "Starling Bank API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2758577"
+	},
+	"item": [
+		{
+			"name": "Technical_Challenge",
+			"item": [
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/home"
+					},
+					"response": []
+				},
+				{
+					"name": "RoundUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accountUid\": \"9a38389c-17b8-4b46-89cd-2b88b10345c1\",\r\n  \"savingGoalUid\": \"707613d3-96d5-49b8-9286-2af9782bfad6\",\r\n  \"minTransactionTimestamp\": \"2023-03-28T20:31:30.010Z\",\r\n  \"maxTransactionTimestamp\": \"2023-03-29T20:31:30.010Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/roundUp"
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/accounts"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fetch Accounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJQUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_31USW7cMBD8iqGz29C-3XLLB_KAFtmaIUyRAknZMYL8PZRIjUbjQY5d1UsVu6U_ibA26ROcBXCa9Jt1aKRQlwHV-xvTU_Ka2GXwGVWed2wgBoS8hDLlGeCYdUBFl3Vpm1PaND6Zfs9Jn9VtmuVZ26WviUAXgLSoyhVAxvSi3E8tOZlfgvvebcvTFhuCri05lHUzQDvmBVRDWdQ8ryuWDb630--kQkWZlWNVYAG-roASicDnImRlSenYVEXX5b7C2_rBGFkbqpqhwoLqFAry8kveMGjbkYDqMs3GusnHql4NMz3T-ihBKTCpLfHeeOcvO3bd5IPCiZ4S7mt-IAQn5cQoyJxxKaw7ITHg3HjhPXHhbkFgnEN2neiWecSfRjh6wcVdtRHWrxGE4uJD8AVlSB5QomJRGkPDgWnljJZh0IpETqtRmAmd0Ar0COOiuL1R9jZ9D8Jotlinp90iTShiY0leiLr0OM_y6xZtWRMqjo56TpJ8iz2MnHkntxqZDY1kyGu3_6OCjMDNEhn5F3B0MZuP-8LvZCwlw664u5vIoVeDPfPhxsZ4MzXjF9FOhSCaCMGRBGLCS_QUAT_ZqH0tIf-OdgaVRXao9jAMi3zv9-3SAR0KQnyICPHeYL0Rf2-TcEdPqZkXcddhA0CvR_KIxiqjRyF3S8HjCdqyDDESszsF9kyFB9-WZ1BG0uKH36mFiz5knbBo7oR9qwzv5xs_a3GQT3odZGjKrsQXSRzi-0WYnPN-lzmGM-7flP-BbrcN2vC78Wd0n3tGn9SD_lQ33NG2QGY_HqGZjxFaBsuMf9z1bvYp99iWdX9c2_4ery35-w82dV1_GQYAAA.X2wzSUWgDAU6w4GGxgsgOfgSo6MREv9JFFNOoYdaIwK6L0LhD97p73xqUjJK0y9d4dBxKIzzrgZ4sFhm6aMLesfmjYC2geK4eMLLR_KJWuV_2Lr__9FbfpkKKJWi2uJNZdN6gt6ff09ygy6eGTANjsLeE02LFStnKG1xm96DVPd18AWNR2SVQ_TyB2GGEo0skDKnYwNmjMcyc98AFA2LyQm5zJrxCXRVtNh0mJzKcRBabIRZoRHxlSBQv7-GRgAAXwbxhUZZcMshh_joTGF0lSSGm0Kh7nJ90rtdxuoBgRezj2Vp4cBmXEAubveE1wJOFeei76azciX7PJGW44afsfNVlabkvXZ1xHBq-ikg-MY8vJbzIZh1S4O7xprqgQTjdiacwCyJx4sSpBK-ecWboTAaWgE373m4muaDzpVjGQVc3pvUwEA08fAhHw8nBJwksP30iqPG_R7o9uPylclJiquKUzI1xBD9T5iCPUu3mgk5OVNtEGvyuLiUcg0CNKdMDlqrbq1pz3Abm3tqXh4ToUpv28jGCjhiOQSXJuS3O0ygnJEJFv00ARv49BL7K7bX_kOAf5D56RNC1Q3C9Q6d0S9v3Is1pmuVqGbgzUdUTPn5XZ876tdMXUadkGVnQFgVlc8VtOKvKP_WCwrD8EiHMPyCI3mwC17KuvtTAvGrSoE",
+						"type": "text"
+					}
+				],
+				"url": "https://api-sandbox.starlingbank.com/api/v2/accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Feed ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJQUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_31USW7cMBD8iqGz29C-3XLLB_KAFtmaIUyRAknZMYL8PZRIjUbjQY5d1UsVu6U_ibA26ROcBXCa9Jt1aKRQlwHV-xvTU_Ka2GXwGVWed2wgBoS8hDLlGeCYdUBFl3Vpm1PaND6Zfs9Jn9VtmuVZ26WviUAXgLSoyhVAxvSi3E8tOZlfgvvebcvTFhuCri05lHUzQDvmBVRDWdQ8ryuWDb630--kQkWZlWNVYAG-roASicDnImRlSenYVEXX5b7C2_rBGFkbqpqhwoLqFAry8kveMGjbkYDqMs3GusnHql4NMz3T-ihBKTCpLfHeeOcvO3bd5IPCiZ4S7mt-IAQn5cQoyJxxKaw7ITHg3HjhPXHhbkFgnEN2neiWecSfRjh6wcVdtRHWrxGE4uJD8AVlSB5QomJRGkPDgWnljJZh0IpETqtRmAmd0Ar0COOiuL1R9jZ9D8Jotlinp90iTShiY0leiLr0OM_y6xZtWRMqjo56TpJ8iz2MnHkntxqZDY1kyGu3_6OCjMDNEhn5F3B0MZuP-8LvZCwlw664u5vIoVeDPfPhxsZ4MzXjF9FOhSCaCMGRBGLCS_QUAT_ZqH0tIf-OdgaVRXao9jAMi3zv9-3SAR0KQnyICPHeYL0Rf2-TcEdPqZkXcddhA0CvR_KIxiqjRyF3S8HjCdqyDDESszsF9kyFB9-WZ1BG0uKH36mFiz5knbBo7oR9qwzv5xs_a3GQT3odZGjKrsQXSRzi-0WYnPN-lzmGM-7flP-BbrcN2vC78Wd0n3tGn9SD_lQ33NG2QGY_HqGZjxFaBsuMf9z1bvYp99iWdX9c2_4ery35-w82dV1_GQYAAA.X2wzSUWgDAU6w4GGxgsgOfgSo6MREv9JFFNOoYdaIwK6L0LhD97p73xqUjJK0y9d4dBxKIzzrgZ4sFhm6aMLesfmjYC2geK4eMLLR_KJWuV_2Lr__9FbfpkKKJWi2uJNZdN6gt6ff09ygy6eGTANjsLeE02LFStnKG1xm96DVPd18AWNR2SVQ_TyB2GGEo0skDKnYwNmjMcyc98AFA2LyQm5zJrxCXRVtNh0mJzKcRBabIRZoRHxlSBQv7-GRgAAXwbxhUZZcMshh_joTGF0lSSGm0Kh7nJ90rtdxuoBgRezj2Vp4cBmXEAubveE1wJOFeei76azciX7PJGW44afsfNVlabkvXZ1xHBq-ikg-MY8vJbzIZh1S4O7xprqgQTjdiacwCyJx4sSpBK-ecWboTAaWgE373m4muaDzpVjGQVc3pvUwEA08fAhHw8nBJwksP30iqPG_R7o9uPylclJiquKUzI1xBD9T5iCPUu3mgk5OVNtEGvyuLiUcg0CNKdMDlqrbq1pz3Abm3tqXh4ToUpv28jGCjhiOQSXJuS3O0ygnJEJFv00ARv49BL7K7bX_kOAf5D56RNC1Q3C9Q6d0S9v3Is1pmuVqGbgzUdUTPn5XZ876tdMXUadkGVnQFgVlc8VtOKvKP_WCwrD8EiHMPyCI3mwC17KuvtTAvGrSoE ",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-sandbox.starlingbank.com/api/v2/feed/account/9a38389c-17b8-4b46-89cd-2b88b10345c1/category/4f91690b-8a34-4730-851f-4834b4d986b3?changesSince=2023-03-28T20:31:30.010Z",
+					"protocol": "https",
+					"host": [
+						"api-sandbox",
+						"starlingbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"feed",
+						"account",
+						"9a38389c-17b8-4b46-89cd-2b88b10345c1",
+						"category",
+						"4f91690b-8a34-4730-851f-4834b4d986b3"
+					],
+					"query": [
+						{
+							"key": "changesSince",
+							"value": "2023-03-28T20:31:30.010Z"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Transactions",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJQUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_31USW7cMBD8iqGz29C-3XLLB_KAFtmaIUyRAknZMYL8PZRIjUbjQY5d1UsVu6U_ibA26ROcBXCa9Jt1aKRQlwHV-xvTU_Ka2GXwGVWed2wgBoS8hDLlGeCYdUBFl3Vpm1PaND6Zfs9Jn9VtmuVZ26WviUAXgLSoyhVAxvSi3E8tOZlfgvvebcvTFhuCri05lHUzQDvmBVRDWdQ8ryuWDb630--kQkWZlWNVYAG-roASicDnImRlSenYVEXX5b7C2_rBGFkbqpqhwoLqFAry8kveMGjbkYDqMs3GusnHql4NMz3T-ihBKTCpLfHeeOcvO3bd5IPCiZ4S7mt-IAQn5cQoyJxxKaw7ITHg3HjhPXHhbkFgnEN2neiWecSfRjh6wcVdtRHWrxGE4uJD8AVlSB5QomJRGkPDgWnljJZh0IpETqtRmAmd0Ar0COOiuL1R9jZ9D8Jotlinp90iTShiY0leiLr0OM_y6xZtWRMqjo56TpJ8iz2MnHkntxqZDY1kyGu3_6OCjMDNEhn5F3B0MZuP-8LvZCwlw664u5vIoVeDPfPhxsZ4MzXjF9FOhSCaCMGRBGLCS_QUAT_ZqH0tIf-OdgaVRXao9jAMi3zv9-3SAR0KQnyICPHeYL0Rf2-TcEdPqZkXcddhA0CvR_KIxiqjRyF3S8HjCdqyDDESszsF9kyFB9-WZ1BG0uKH36mFiz5knbBo7oR9qwzv5xs_a3GQT3odZGjKrsQXSRzi-0WYnPN-lzmGM-7flP-BbrcN2vC78Wd0n3tGn9SD_lQ33NG2QGY_HqGZjxFaBsuMf9z1bvYp99iWdX9c2_4ery35-w82dV1_GQYAAA.X2wzSUWgDAU6w4GGxgsgOfgSo6MREv9JFFNOoYdaIwK6L0LhD97p73xqUjJK0y9d4dBxKIzzrgZ4sFhm6aMLesfmjYC2geK4eMLLR_KJWuV_2Lr__9FbfpkKKJWi2uJNZdN6gt6ff09ygy6eGTANjsLeE02LFStnKG1xm96DVPd18AWNR2SVQ_TyB2GGEo0skDKnYwNmjMcyc98AFA2LyQm5zJrxCXRVtNh0mJzKcRBabIRZoRHxlSBQv7-GRgAAXwbxhUZZcMshh_joTGF0lSSGm0Kh7nJ90rtdxuoBgRezj2Vp4cBmXEAubveE1wJOFeei76azciX7PJGW44afsfNVlabkvXZ1xHBq-ikg-MY8vJbzIZh1S4O7xprqgQTjdiacwCyJx4sSpBK-ecWboTAaWgE373m4muaDzpVjGQVc3pvUwEA08fAhHw8nBJwksP30iqPG_R7o9uPylclJiquKUzI1xBD9T5iCPUu3mgk5OVNtEGvyuLiUcg0CNKdMDlqrbq1pz3Abm3tqXh4ToUpv28jGCjhiOQSXJuS3O0ygnJEJFv00ARv49BL7K7bX_kOAf5D56RNC1Q3C9Q6d0S9v3Is1pmuVqGbgzUdUTPn5XZ876tdMXUadkGVnQFgVlc8VtOKvKP_WCwrD8EiHMPyCI3mwC17KuvtTAvGrSoE",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://api-sandbox.starlingbank.com/api/v2/feed/account/9a38389c-17b8-4b46-89cd-2b88b10345c1/category/4f91690b-8a34-4730-851f-4834b4d986b3/4151428b-859b-4ddc-819e-7b1ed6bed9f5/receipt"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Weekly Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJQUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_31USW7cMBD8iqGz29C-3XLLB_KAFtmaIUyRAknZMYL8PZRIjUbjQY5d1UsVu6U_ibA26ROcBXCa9Jt1aKRQlwHV-xvTU_Ka2GXwGVWed2wgBoS8hDLlGeCYdUBFl3Vpm1PaND6Zfs9Jn9VtmuVZ26WviUAXgLSoyhVAxvSi3E8tOZlfgvvebcvTFhuCri05lHUzQDvmBVRDWdQ8ryuWDb630--kQkWZlWNVYAG-roASicDnImRlSenYVEXX5b7C2_rBGFkbqpqhwoLqFAry8kveMGjbkYDqMs3GusnHql4NMz3T-ihBKTCpLfHeeOcvO3bd5IPCiZ4S7mt-IAQn5cQoyJxxKaw7ITHg3HjhPXHhbkFgnEN2neiWecSfRjh6wcVdtRHWrxGE4uJD8AVlSB5QomJRGkPDgWnljJZh0IpETqtRmAmd0Ar0COOiuL1R9jZ9D8Jotlinp90iTShiY0leiLr0OM_y6xZtWRMqjo56TpJ8iz2MnHkntxqZDY1kyGu3_6OCjMDNEhn5F3B0MZuP-8LvZCwlw664u5vIoVeDPfPhxsZ4MzXjF9FOhSCaCMGRBGLCS_QUAT_ZqH0tIf-OdgaVRXao9jAMi3zv9-3SAR0KQnyICPHeYL0Rf2-TcEdPqZkXcddhA0CvR_KIxiqjRyF3S8HjCdqyDDESszsF9kyFB9-WZ1BG0uKH36mFiz5knbBo7oR9qwzv5xs_a3GQT3odZGjKrsQXSRzi-0WYnPN-lzmGM-7flP-BbrcN2vC78Wd0n3tGn9SD_lQ33NG2QGY_HqGZjxFaBsuMf9z1bvYp99iWdX9c2_4ery35-w82dV1_GQYAAA.X2wzSUWgDAU6w4GGxgsgOfgSo6MREv9JFFNOoYdaIwK6L0LhD97p73xqUjJK0y9d4dBxKIzzrgZ4sFhm6aMLesfmjYC2geK4eMLLR_KJWuV_2Lr__9FbfpkKKJWi2uJNZdN6gt6ff09ygy6eGTANjsLeE02LFStnKG1xm96DVPd18AWNR2SVQ_TyB2GGEo0skDKnYwNmjMcyc98AFA2LyQm5zJrxCXRVtNh0mJzKcRBabIRZoRHxlSBQv7-GRgAAXwbxhUZZcMshh_joTGF0lSSGm0Kh7nJ90rtdxuoBgRezj2Vp4cBmXEAubveE1wJOFeei76azciX7PJGW44afsfNVlabkvXZ1xHBq-ikg-MY8vJbzIZh1S4O7xprqgQTjdiacwCyJx4sSpBK-ecWboTAaWgE373m4muaDzpVjGQVc3pvUwEA08fAhHw8nBJwksP30iqPG_R7o9uPylclJiquKUzI1xBD9T5iCPUu3mgk5OVNtEGvyuLiUcg0CNKdMDlqrbq1pz3Abm3tqXh4ToUpv28jGCjhiOQSXJuS3O0ygnJEJFv00ARv49BL7K7bX_kOAf5D56RNC1Q3C9Q6d0S9v3Is1pmuVqGbgzUdUTPn5XZ876tdMXUadkGVnQFgVlc8VtOKvKP_WCwrD8EiHMPyCI3mwC17KuvtTAvGrSoE",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-sandbox.starlingbank.com/api/v2/feed/account/9a38389c-17b8-4b46-89cd-2b88b10345c1/category/4f91690b-8a34-4730-851f-4834b4d986b3/transactions-between?minTransactionTimestamp=2023-03-28T20:31:30.010Z&maxTransactionTimestamp=2023-03-29T20:31:30.010Z",
+					"protocol": "https",
+					"host": [
+						"api-sandbox",
+						"starlingbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"feed",
+						"account",
+						"9a38389c-17b8-4b46-89cd-2b88b10345c1",
+						"category",
+						"4f91690b-8a34-4730-851f-4834b4d986b3",
+						"transactions-between"
+					],
+					"query": [
+						{
+							"key": "minTransactionTimestamp",
+							"value": "2023-03-28T20:31:30.010Z"
+						},
+						{
+							"key": "maxTransactionTimestamp",
+							"value": "2023-03-29T20:31:30.010Z"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Savings Goal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJQUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_31Uy5KbMBD8lS3OO1u8wdxyyw_kAwZpsFUWEiUJb7ZS-fcIJIzxulI-dfc8ejSD_yTC2qRLcBLAadQf1qGRQp17VNcPpsfkPbFz7yOqPD-xnhgQ8hLKlGeAQ3YCKk7ZKW1zSpvGB9PvKemyuk3zrKjq9D0R6AKR5U22EMiYnpX7qSUn80twX7ttedpiQ3BqSw5l3fTQDnkBVV8WNc_rimW9r-30lVTIKBv_46cSGLY5lJUPPvVUABFn6CFlTeoz_Fg_GCNrQ1bTV1hQnUJB3n7JGwZtOxBQXabZUDf5UNXLwExPtDxKcApMaku8M37yt427rPZB4UgvBfc1PQmCk3JiEGSOvBTWHZgIODfeeEdcuDsIinPILiPdI3f8aYSjN5zdRRth_RpBKC5ugs8oQ3CPEhWL1hgaDkwrZ7QMjRYmaloNwozohFagBxhmxe1dsvfuGwit2WydHrcRaUQRC0vyRtS5w2mSX3e0Ro2oODrqOEnyJTYYNXMltwwyGRrIkPdu_ycFG0GbJDLyL-DobNY5HhO_izGVDLvgNt1IDr0b7JiHqxrxOtSEX0SbFEAcIoA9CMSI5zhTJHxno7a1hPgH2RlUFtnu2tPQz_LabdulndodBLybCHgrsNyIv7dRuL2m1MybeKiwEqCXI3lmY5bRg5DbSGHGA7VGGWIkJncA9iiFB1-XZ1BG0eLN79TCWe-2Dlwc7sB9ywzv5wu_KrGLL2rtYijKLsRnSRzi-0WanPPzzlOEE27flP8DXW8btOEP7Y_s1vfIvsgH_anuvKN1gczenqmJD5Gae8uMf9zlbrYuj9wa9Xhc6_6ery35-w_Mbj6iGQYAAA.OmOdcAK79K4lSMVxX6VYjqn4zRPE3KjdFM6wfKGs3rBCT0c-T01aWrDz8JyLvt5390hotAbgFFzLOruo5CIOPFOMlS2aAhNdeHiy360Jv0xzqJTXwx-pgv6ngYWI3ihwlnuNv_1wBW7FqtxEjgbtlPje1HGCmcq-_CoQAnZK79xYbbV0AimS0am6LFhj2CcN8T0l0J0hBQ5P8DIGGiUE-0uLmbz4A3lzm2NohNucIO3JkW4UxClKRsMQQY3aobiakM9SQ0_FJaVbM1DgSgxgoiLc-JfBq4zTinCVK5FexW97Bs0tgBN42WvVk2KuZHZtJw_0_QEusa-TVpmng31KvL13mV-uoCZU8bISQvDUmSbyABM38VBU4oveBehVh11W6ZbFfcRcQXghvwwNCaqgf2TW43pceO-NmYoAF9eEkGBQbfnRhJKTiBtelRtrgloKuN3620yRnv1gySxnj-FVLPkeRUkcjlnttR8E-0XYXh1beY89hoCNz7gX5EXNIzFiPfL2nnoZR16s0NnxDKSMfyUu_KVIHSBjUr6igW5p4U4KbP1oW9yDuynOfdmBoBm47E5_g0K08vohzYnE57St1XMnHMZAyTAAWDG3cGclA4NaeMYxlpBq6q6OTzLwIPM2iA6EzV4OpSOxPZRqlENQeUslGCFLUI7iEpPCQWh8CeY",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Trip to Paris\",\r\n  \"currency\": \"GBP\",\r\n  \"target\": {\r\n    \"currency\": \"GBP\",\r\n    \"minorUnits\": 123456\r\n  },\r\n  \"base64EncodedPhoto\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-sandbox.starlingbank.com/api/v2/account/9a38389c-17b8-4b46-89cd-2b88b10345c1/savings-goals"
+			},
+			"response": []
+		},
+		{
+			"name": "Put Amount into Savings Goal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJQUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_31Uy5KbMBD8lS3OO1u8wdxyyw_kAwZpsFUWEiUJb7ZS-fcIJIzxulI-dfc8ejSD_yTC2qRLcBLAadQf1qGRQp17VNcPpsfkPbFz7yOqPD-xnhgQ8hLKlGeAQ3YCKk7ZKW1zSpvGB9PvKemyuk3zrKjq9D0R6AKR5U22EMiYnpX7qSUn80twX7ttedpiQ3BqSw5l3fTQDnkBVV8WNc_rimW9r-30lVTIKBv_46cSGLY5lJUPPvVUABFn6CFlTeoz_Fg_GCNrQ1bTV1hQnUJB3n7JGwZtOxBQXabZUDf5UNXLwExPtDxKcApMaku8M37yt427rPZB4UgvBfc1PQmCk3JiEGSOvBTWHZgIODfeeEdcuDsIinPILiPdI3f8aYSjN5zdRRth_RpBKC5ugs8oQ3CPEhWL1hgaDkwrZ7QMjRYmaloNwozohFagBxhmxe1dsvfuGwit2WydHrcRaUQRC0vyRtS5w2mSX3e0Ro2oODrqOEnyJTYYNXMltwwyGRrIkPdu_ycFG0GbJDLyL-DobNY5HhO_izGVDLvgNt1IDr0b7JiHqxrxOtSEX0SbFEAcIoA9CMSI5zhTJHxno7a1hPgH2RlUFtnu2tPQz_LabdulndodBLybCHgrsNyIv7dRuL2m1MybeKiwEqCXI3lmY5bRg5DbSGHGA7VGGWIkJncA9iiFB1-XZ1BG0eLN79TCWe-2Dlwc7sB9ywzv5wu_KrGLL2rtYijKLsRnSRzi-0WanPPzzlOEE27flP8DXW8btOEP7Y_s1vfIvsgH_anuvKN1gczenqmJD5Gae8uMf9zlbrYuj9wa9Xhc6_6ery35-w_Mbj6iGQYAAA.OmOdcAK79K4lSMVxX6VYjqn4zRPE3KjdFM6wfKGs3rBCT0c-T01aWrDz8JyLvt5390hotAbgFFzLOruo5CIOPFOMlS2aAhNdeHiy360Jv0xzqJTXwx-pgv6ngYWI3ihwlnuNv_1wBW7FqtxEjgbtlPje1HGCmcq-_CoQAnZK79xYbbV0AimS0am6LFhj2CcN8T0l0J0hBQ5P8DIGGiUE-0uLmbz4A3lzm2NohNucIO3JkW4UxClKRsMQQY3aobiakM9SQ0_FJaVbM1DgSgxgoiLc-JfBq4zTinCVK5FexW97Bs0tgBN42WvVk2KuZHZtJw_0_QEusa-TVpmng31KvL13mV-uoCZU8bISQvDUmSbyABM38VBU4oveBehVh11W6ZbFfcRcQXghvwwNCaqgf2TW43pceO-NmYoAF9eEkGBQbfnRhJKTiBtelRtrgloKuN3620yRnv1gySxnj-FVLPkeRUkcjlnttR8E-0XYXh1beY89hoCNz7gX5EXNIzFiPfL2nnoZR16s0NnxDKSMfyUu_KVIHSBjUr6igW5p4U4KbP1oW9yDuynOfdmBoBm47E5_g0K08vohzYnE57St1XMnHMZAyTAAWDG3cGclA4NaeMYxlpBq6q6OTzLwIPM2iA6EzV4OpSOxPZRqlENQeUslGCFLUI7iEpPCQWh8CeY",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": {\r\n    \"currency\": \"GBP\",\r\n    \"minorUnits\": 123457\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-sandbox.starlingbank.com/api/v2/account/9a38389c-17b8-4b46-89cd-2b88b10345c1/savings-goals/707613d3-96d5-49b8-9286-2af9782bfad6/add-money/5934a313-e059-4409-96b6-2db2db07f7a4"
+			},
+			"response": []
+		}
+	]
+}
