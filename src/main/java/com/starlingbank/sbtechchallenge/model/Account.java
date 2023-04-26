@@ -2,6 +2,7 @@ package com.starlingbank.sbtechchallenge.model;
 
 import java.util.UUID;
 
+
 public class Account {
 
     private UUID accountUid;

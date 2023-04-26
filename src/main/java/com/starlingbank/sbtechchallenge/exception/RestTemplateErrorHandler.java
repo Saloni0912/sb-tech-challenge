@@ -20,6 +20,9 @@ public class RestTemplateErrorHandler implements ResponseErrorHandler {
     @Override
     public void handleError(ClientHttpResponse response) throws IOException {
         if(response.getStatusCode().is4xxClientError()){
+            if(response.getStatusCode() == HttpStatus.FORBIDDEN){
+                throw new ClientServiceException("Forbidden to call the API",HttpStatus.FORBIDDEN);
+            }
             if(response.getStatusCode() == HttpStatus.INTERNAL_SERVER_ERROR){
                 throw new ClientServiceException("Failed to call the API",HttpStatus.INTERNAL_SERVER_ERROR);
             }
@@ -29,6 +32,7 @@ public class RestTemplateErrorHandler implements ResponseErrorHandler {
                 throw new ClientServiceException("API failed to respond",HttpStatus.BAD_GATEWAY);
             }
         }
+
 
     }
 }

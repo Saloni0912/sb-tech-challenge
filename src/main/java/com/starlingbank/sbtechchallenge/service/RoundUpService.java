@@ -1,5 +1,6 @@
 package com.starlingbank.sbtechchallenge.service;
 
+import com.starlingbank.sbtechchallenge.exception.RoundUpApiException;
 import com.starlingbank.sbtechchallenge.model.Accounts;
 import com.starlingbank.sbtechchallenge.model.Amount;
 import com.starlingbank.sbtechchallenge.model.FeedItems;
@@ -7,6 +8,7 @@ import com.starlingbank.sbtechchallenge.model.SavingGoalResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.time.OffsetDateTime;
@@ -32,10 +34,17 @@ public class RoundUpService {
 
     public Amount calculateAmount(OffsetDateTime minTransactionTimestamp, OffsetDateTime maxTransactionTimestamp){
         Accounts accounts = accountsService.fetchAccountsFromApi();
+        if(accounts == null){
+            throw new RoundUpApiException(HttpStatus.INTERNAL_SERVER_ERROR,"Accounts details are emtpy");
+        }
         UUID accountUid = accounts.getAccounts().get(0).getAccountUid();
         UUID categoryUid = accounts.getAccounts().get(0).getDefaultCategory();
 
         FeedItems feedItems = transactionsService.fetchTransactions(accountUid, categoryUid, minTransactionTimestamp, maxTransactionTimestamp);
+        if(feedItems == null){
+            throw new RoundUpApiException(HttpStatus.INTERNAL_SERVER_ERROR, "Feeditems is empty");
+        }
+
         int roundUpValue = feedItems.getFeedItems().stream()
                 .filter(feedItem -> feedItem.getDirection().equalsIgnoreCase("OUT"))
                 .mapToInt(feedItem -> feedItem.getAmount().getMinorUnits())

@@ -1,6 +1,7 @@
 package com.starlingbank.sbtechchallenge.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.starlingbank.sbtechchallenge.exception.RoundUpApiException;
 import com.starlingbank.sbtechchallenge.model.Accounts;
 import com.starlingbank.sbtechchallenge.model.Amount;
 import com.starlingbank.sbtechchallenge.model.FeedItems;
@@ -11,6 +12,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.HttpStatus;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,4 +64,16 @@ class RoundUpServiceTest {
 
     }
 
+    void calculateAmount_WithEmptyFeedItems_Test() throws IOException {
+        Accounts accounts = mapper.readValue(new File("src/test/resources/accounts.json"),Accounts.class);
+        System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(accounts));
+
+        Mockito.when(accountsService.fetchAccountsFromApi()).thenReturn(accounts);
+        Mockito.when(transactionsService.fetchTransactions(any(),any(),any(),any())).thenThrow(new RoundUpApiException(HttpStatus.INTERNAL_SERVER_ERROR, "Feeditems is empty"));
+
+
+
+
+
+    }
 }
