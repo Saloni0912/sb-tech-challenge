@@ -25,7 +25,7 @@ to save a given amount towards a savings goal.
 
 ## Design
 I created a ```Springboot 3``` app which requires ```Java 17```+ compatibility. My app has three layers - Controller, Services and Client(Starling API). I have used ```Spring RestTemplate``` extensively to query Starling API. For Error Handling, adding headers in request, logging request and responses, I have used ```Spring Interceptors```. These interceptors are configured within RestTemplate. The app interacts with Starling API to fetch accounts and transactions. I used Java ```Stream API``` to calculate the rounded up value. The app calls the Savings Goal API to transfer the rounded up value to a saving goal. 
-I have created test cases using ```JUnit 5```,``` MockMvc``` and ```Mockito```. 
+I have created test cases using ```JUnit 5```,``` MockMvc``` and ```Mockito```. Also, I have implemented ```Global Exception Handling``` to handle errors during the api calls. 
 
 ## Technologies
 1. Java 17
