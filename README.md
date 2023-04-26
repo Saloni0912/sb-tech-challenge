@@ -1,11 +1,11 @@
-# Starling Bank Technical Challenge
+# Integration with External Public API
 
 For a customer, take all the transactions in a given week and round them up to the nearest
 pound. For example with spending of £4.35, £5.20 and £0.87, the round-up would be £1.58.
 This amount should then be transferred into a savings goal, helping the customer save for
 future adventures.
 
-This challenge is submitted by Saloni Thakare. The task is to create a round-up feature for Starling customers using Starling Bank Public API which is available to all customers and partners.
+The task is to create a round-up feature for Starling customers using Starling Bank Public API which is available to all customers and partners.
 It a Springboot REST API application written in Java. There are two APIs, one to fetch accounts ("/accounts") and other to calculate and save amount into a savings goal ("/round-up").
 This application internally calls 3 APIs from Starling Bank Public API, Accounts API to fetch accounts for a customer, Transaction Feeds to fetch transaction feeds in a given period and Savings Goal API
 to save a given amount towards a savings goal.
@@ -14,10 +14,31 @@ to save a given amount towards a savings goal.
 
 ## Table of Contents
 
+- [Design](#design)
+- [Technologies](#technologies)
+- [Tools](#tools)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Updates](#updates)
 - [Contact](#contact)
+
+## Design
+I created a ```Springboot 3``` app which requires ```Java 17```+ compatibility. My app has three layers - Controller, Services and Client(Starling API). I have used ```Spring RestTemplate``` extensively to query Starling API. For Error Handling, adding headers in request, logging request and responses, I have used ```Spring Interceptors```. These interceptors are configured within RestTemplate. The app interacts with Starling API to fetch accounts and transactions. I used Java ```Stream API``` to calculate the rounded up value. The app calls the Savings Goal API to transfer the rounded up value to a saving goal. 
+I have created test cases using ```JUnit 5```,``` MockMvc``` and ```Mockito```. 
+
+## Technologies
+1. Java 17
+2. Springboot 3.0.5
+3. Gradle
+4. JUnit 5
+5. MockMvc
+6. Mockito
+
+## Tools
+1. IntelliJ IDEA
+2. Postman Rest Client
+3. Git
 
 ## Installation
 
@@ -76,6 +97,14 @@ Following API calls are available which internally trigger the Starling Bank RES
     "errors": null
     }
     ```
+
+## Updates
+Currently, I am working on adding the following: 
+1. Add more failure test scenarios
+2. Spring Security
+3. Configure Spring-Retry to tackle transient errors
+4. Add Swagger UI Documentation
+5. Add lombok library
 
 
 ## Contact
